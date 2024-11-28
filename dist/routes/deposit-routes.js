@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const deposit_controller_js_1 = require("../controllers/deposit-controller.js");
+const router = (0, express_1.Router)();
+const depositController = new deposit_controller_js_1.DepositController();
+router.post("/deposits", (req, res) => depositController.createDeposit(req, res));
+router.get("/deposits", (req, res) => depositController.getAllDeposits(req, res));
+router.get("/deposits/:id", (req, res) => depositController.getDepositById(req, res));
+router.delete("/deposits/:id", (req, res) => depositController.deleteDeposit(req, res));
+router.put("/deposits/:id", (req, res) => depositController.updateDeposit(req, res));
+router.post("/profile/:profileId", (req, res) => depositController.makeDeposit(req, res));
+exports.default = router;
