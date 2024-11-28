@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const contract_controller_js_1 = require("../controllers/contract-controller.js");
+const router = (0, express_1.Router)();
+const contractController = new contract_controller_js_1.ContractController();
+router.post("/contracts", (req, res) => contractController.createContract(req, res));
+router.get("/contracts", (req, res) => contractController.getAllContracts(req, res));
+router.get("/contracts/:id", (req, res) => contractController.getContractById(req, res));
+router.put("/contracts/:id", (req, res) => contractController.updateContract(req, res));
+router.delete("/contracts/:id", (req, res) => contractController.deleteContract(req, res));
+router.get("/profile/:Id", (req, res) => contractController.getContractsByProfile(req, res));
+exports.default = router;
