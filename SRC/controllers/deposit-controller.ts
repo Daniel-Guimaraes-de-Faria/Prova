@@ -66,8 +66,9 @@ export class DepositController {
         try {
             const profileId = Number(req.params.profileId);
             const amount = Number(req.body.amount);
+            console.log(`Realizando deposito para no Profile ID: ${profileId} de valor ${amount}`);
             const deposit = await this.depositService.makeDeposit(profileId, amount);
-            res.status(201).json(deposit);
+            res.status(201).json({ messagem: `O deposito de valor ${amount} para o Profile de ID: ${profileId} foi realizado com sucesso!!!`, deposit });
         } catch (error) {
             res.status(500).json({ message: "falha ao fazer um deposito", error: (error as Error).message });
         }

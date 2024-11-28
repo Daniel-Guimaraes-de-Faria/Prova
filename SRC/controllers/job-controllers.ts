@@ -66,8 +66,12 @@ export class JobController {
     async getUnpaidJobs(req: Request, res: Response) {
         try {
             const contractId = Number(req.params.contractId);
+            console.log(`Listando todos Jobs do Contrato ID: ${contractId} não pagos integralmente`);
             const unpaidJobs = await this.jobService.getUnpaidJobs(contractId);
-            res.status(200).json(unpaidJobs);
+            res.status(200).json({
+                message: `Foram encontrados ${unpaidJobs.length} jobs não pagos para o contrato ID: ${contractId}.`,
+                unpaidJobs
+            });
         } catch (error) {
             res.status(500).json({ message: "Falha ao recuperar os jobs não pagos", error: (error as Error).message });
         }
