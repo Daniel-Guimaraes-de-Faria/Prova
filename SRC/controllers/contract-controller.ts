@@ -64,8 +64,9 @@ export class ContractController {
     async getContractsByProfile(req: Request, res: Response) {
         try {
             const Id = Number(req.params.Id);
+            console.log(`Buscando contrados de Profile ID: ${Id}`)
             const contracts = await this.contractService.getContractsByProfile(Id);
-            res.status(200).json(contracts);
+            res.status(200).json({ message: `Esse são todos os contratos do Profile ID: ${Id}`, contracts });
         } catch (error) {
             res.status(500).json({
                 message: "Falha ao recuperar os contratos de um profile",
