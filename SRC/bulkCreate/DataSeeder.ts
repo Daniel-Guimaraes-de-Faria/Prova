@@ -18,7 +18,18 @@ export class DatabaseSeeder {
             { "firstName": "Gustavo", "lastName": "Ribeiro", "profession": "Analista", "balance": 3200, "type": "contractor" },
             { "firstName": "Helena", "lastName": "Souza", "profession": "Engenheira Civil", "balance": 4800, "type": "client" },
             { "firstName": "Igor", "lastName": "Machado", "profession": "Gerente de Projetos", "balance": 6000, "type": "contractor" },
-            { "firstName": "Juliana", "lastName": "Lima", "profession": "Advogada", "balance": 8000, "type": "client" }
+            { "firstName": "Juliana", "lastName": "Lima", "profession": "Advogada", "balance": 8000, "type": "client" },
+            { "firstName": "Lara", "lastName": "Dias", "profession": "Contadora", "balance": 5000, "type": "client" },
+            { "firstName": "Marcos", "lastName": "Oliveira", "profession": "Engenheiro", "balance": 4200, "type": "contractor" },
+            { "firstName": "Natalia", "lastName": "Ferreira", "profession": "Médica", "balance": 9000, "type": "client" },
+            { "firstName": "Paulo", "lastName": "Gomes", "profession": "Advogado", "balance": 3500, "type": "contractor" },
+            { "firstName": "Renata", "lastName": "Farias", "profession": "Psicóloga", "balance": 7600, "type": "client" },
+            { "firstName": "Thiago", "lastName": "Lacerda", "profession": "Engenheiro Mecânico", "balance": 4500, "type": "contractor" },
+            { "firstName": "Vanessa", "lastName": "Martins", "profession": "Arquiteta", "balance": 6200, "type": "client" },
+            { "firstName": "Wilson", "lastName": "Carvalho", "profession": "Engenheiro Civil", "balance": 5000, "type": "contractor" },
+            { "firstName": "Yara", "lastName": "Castro", "profession": "Consultora Financeira", "balance": 8000, "type": "client" },
+            { "firstName": "Zeca", "lastName": "Alves", "profession": "Programador", "balance": 4000, "type": "contractor" }
+
         ];
 
         await Profile.bulkCreate(profiles);
@@ -27,10 +38,28 @@ export class DatabaseSeeder {
     public async createContracts(): Promise<void> {
         const contracts = [
             { "terms": "Consultoria", "clientId": 1, "contractorId": 2, "operationDate": new Date("2024-11-01"), "status": "ativo" },
+            { "terms": "Validação", "clientId": 2, "contractorId": 1, "operationDate": new Date("2021-11-25"), "status": "finalizado" },
             { "terms": "Desenvolvimento de Software", "clientId": 3, "contractorId": 4, "operationDate": new Date("2024-11-05"), "status": "ativo" },
             { "terms": "Design de Interiores", "clientId": 5, "contractorId": 6, "operationDate": new Date("2024-11-08"), "status": "finalizado" },
             { "terms": "Projeto Arquitetônico", "clientId": 7, "contractorId": 8, "operationDate": new Date("2024-11-12"), "status": "ativo" },
-            { "terms": "Gerenciamento de Projetos", "clientId": 9, "contractorId": 10, "operationDate": new Date("2024-11-15"), "status": "ativo" }
+            { "terms": "Gerenciamento de Projetos", "clientId": 9, "contractorId": 10, "operationDate": new Date("2024-11-15"), "status": "ativo" },
+            { "terms": "Marketing Digital", "clientId": 11, "contractorId": 13, "operationDate": new Date("2024-11-17"), "status": "finalizado" },
+            { "terms": "Auditoria de Sistema", "clientId": 14, "contractorId": 12, "operationDate": new Date("2024-11-18"), "status": "ativo" },
+            { "terms": "Criação de Website", "clientId": 3, "contractorId": 14, "operationDate": new Date("2024-10-22"), "status": "ativo" },
+            { "terms": "Análise de Mercado", "clientId": 6, "contractorId": 13, "operationDate": new Date("2024-09-14"), "status": "finalizado" },
+            { "terms": "Planejamento Financeiro", "clientId": 8, "contractorId": 15, "operationDate": new Date("2024-11-01"), "status": "ativo" },
+            { "terms": "Implementação de ERP", "clientId": 9, "contractorId": 12, "operationDate": new Date("2024-10-10"), "status": "ativo" },
+            { "terms": "Projeto de Paisagismo", "clientId": 7, "contractorId": 6, "operationDate": new Date("2023-12-15"), "status": "finalizado" },
+            { "terms": "Treinamento de Equipe", "clientId": 2, "contractorId": 8, "operationDate": new Date("2024-08-20"), "status": "ativo" },
+            { "terms": "Auditoria Contábil", "clientId": 11, "contractorId": 16, "operationDate": new Date("2024-09-30"), "status": "ativo" },
+            { "terms": "Design Gráfico", "clientId": 12, "contractorId": 17, "operationDate": new Date("2024-06-12"), "status": "finalizado" },
+            { "terms": "Consultoria Jurídica", "clientId": 10, "contractorId": 18, "operationDate": new Date("2024-07-18"), "status": "ativo" },
+            { "terms": "Manutenção Predial", "clientId": 14, "contractorId": 19, "operationDate": new Date("2024-03-05"), "status": "finalizado" },
+            { "terms": "Automação Residencial", "clientId": 13, "contractorId": 20, "operationDate": new Date("2024-05-22"), "status": "ativo" },
+            { "terms": "Estratégia de Marketing", "clientId": 15, "contractorId": 17, "operationDate": new Date("2024-04-18"), "status": "ativo" },
+            { "terms": "Reforma de Escritório", "clientId": 16, "contractorId": 19, "operationDate": new Date("2024-02-27"), "status": "finalizado" },
+            { "terms": "Criação de Identidade Visual", "clientId": 17, "contractorId": 18, "operationDate": new Date("2024-10-15"), "status": "ativo" },
+            { "terms": "Desenvolvimento Mobile", "clientId": 18, "contractorId": 20, "operationDate": new Date("2024-01-05"), "status": "ativo" }
         ];
 
         await Contract.bulkCreate(contracts);

@@ -61,8 +61,8 @@ export class DepositController {
         }
     }
 
-     // Novo método para realizar depósito
-     async makeDeposit(req: Request, res: Response) {
+    //Método para realizar deposito
+    async makeDeposit(req: Request, res: Response) {
         try {
             const profileId = Number(req.params.profileId);
             const amount = Number(req.body.amount);

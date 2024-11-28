@@ -10,6 +10,6 @@ router.get("/contracts/:id", (req, res) => contractController.getContractById(re
 router.put("/contracts/:id", (req, res) => contractController.updateContract(req, res));
 router.delete("/contracts/:id", (req, res) => contractController.deleteContract(req, res));
 
-router.get("/profile/:profileId", contractController.getContractsByProfile);
+router.get("/profile/:Id", (req, res) => contractController.getContractsByProfile(req, res));
 
 export default router;
