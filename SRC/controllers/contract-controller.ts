@@ -60,10 +60,11 @@ export class ContractController {
             res.status(500).json({ message: "Falha ao deletar o contrato", error: (error as Error).message });
         }
     }
+
     async getContractsByProfile(req: Request, res: Response) {
         try {
-            const profileId = Number(req.params.profileId);
-            const contracts = await this.contractService.getContractsByProfile(profileId);
+            const Id = Number(req.params.Id);
+            const contracts = await this.contractService.getContractsByProfile(Id);
             res.status(200).json(contracts);
         } catch (error) {
             res.status(500).json({
@@ -72,5 +73,4 @@ export class ContractController {
             });
         }
     }
-
 }

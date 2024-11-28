@@ -1,4 +1,6 @@
 import { Contract, ContractCreationAttributes } from "../models/contract-models.js";
+import { Op } from 'sequelize';
+
 
 export class ContractRepository {
 
@@ -13,15 +15,30 @@ export class ContractRepository {
     }
 
     // Encontrar todos os contratos
-public async findAll(options?: { where?: { clientId?: number }; include?: { model: any; as: string }[] }): Promise<Contract[]> {
-    try {
-        // Usa as opções fornecidas ou um objeto vazio
-        return await Contract.findAll(options || {});
-    } catch (error) {
-        throw new Error(`Impossível encontrar contratos: ${(error as Error).message}`);
+    public async findAll(options?: { where?: { clientId?: number }; include?: { model: any; as: string }[] }): Promise<Contract[]> {
+        try {
+            // Usa as opções fornecidas ou um objeto vazio
+            return await Contract.findAll(options || {});
+        } catch (error) {
+            throw new Error(`Impossível encontrar contratos: ${(error as Error).message}`);
+        }
     }
-}
 
+
+    public async findContractbyProfile(id: number): Promise<Contract[]> {
+        try {
+            return await Contract.findAll({
+                where: {
+                    [Op.or]: [
+                        { clientId: id },
+                        { contractorId: id }
+                    ]
+                },
+            });
+        } catch (error) {
+            throw new Error(`Erro ao buscar os contratos do Profile ${id} : ${(error as Error).message}`)
+        }
+    }
 
     // Encontrar contrato por ID
     public async findById(id: number): Promise<Contract | null> {

@@ -10,6 +10,6 @@ router.get("/deposits/:id", (req, res) => depositController.getDepositById(req, 
 router.delete("/deposits/:id", (req, res) => depositController.deleteDeposit(req, res));
 router.put("/deposits/:id", (req, res) => depositController.updateDeposit(req, res));
 
-router.post("/profile/:profileId", depositController.makeDeposit);
+router.post("/profile/:profileId", (req, res) => depositController.makeDeposit(req, res));
 
 export default router;
