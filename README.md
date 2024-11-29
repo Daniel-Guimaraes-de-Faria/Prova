@@ -13,16 +13,20 @@ Listatando todos os contratos
 2. Realizar Deposit para Profile
 
 Realizando o um deposit
-![image](https://github.com/user-attachments/assets/3fd4a1ab-4e96-427d-982f-32d36b54fbab)
+![390926691-3fd4a1ab-4e96-427d-982f-32d36b54fbab](https://github.com/user-attachments/assets/1e154178-1830-4362-bca5-f87f2bbeca56)
+
 
 Buscando o deposit
-![image](https://github.com/user-attachments/assets/cbd01b09-7675-4d03-a47b-93318b9e5183)
+![390926782-cbd01b09-7675-4d03-a47b-93318b9e5183](https://github.com/user-attachments/assets/fba8ca75-2aac-4d96-8a0a-7ba65b8571cf)
+
 
 ----------------------------------------------------------------
 3. Listar todos os Jobs de um Contract que não foram pagos integralmente
 
 Buscando os Jobs de um contrato que não foram pagos integralmente
-![image](https://github.com/user-attachments/assets/49400289-7edf-4203-836e-bf4a5b30783f)
+![390927568-49400289-7edf-4203-836e-bf4a5b30783f](https://github.com/user-attachments/assets/b74059d3-0744-492b-9fcd-9b9ede83a625)
+
 
 Buscando todos os jobs
-![image](https://github.com/user-attachments/assets/c8e7d410-d56a-4561-8360-30d89df2fa49)
+![390927666-c8e7d410-d56a-4561-8360-30d89df2fa49](https://github.com/user-attachments/assets/cf002de4-d350-49b1-a893-d9a38e06bb4a)
+
