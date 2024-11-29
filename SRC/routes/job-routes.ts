@@ -11,6 +11,6 @@ router.put("/jobs/:id", (req, res) => jobController.updateJob(req, res));
 router.delete("/jobs/:id", (req, res) => jobController.deleteJob(req, res));
 
 //Endpoint para listar Jobs não pagos integralmente
-router.get("/contract/:contractId/unpaid", (req, res) => jobController.getUnpaidJobs(req, res));
+router.get("/contract/:contractId", (req, res) => jobController.getUnpaidJobs(req, res));
 
 export default router;
